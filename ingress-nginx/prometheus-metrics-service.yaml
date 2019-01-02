@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: ingress-nginx
+  name: nginx-ingress-prometheus-discovery
+  labels:
+    app.kubernetes.io/name: ingress-nginx-metrics
+spec:
+  selector:
+    app.kubernetes.io/name: ingress-nginx
+  type: ClusterIP
+  clusterIP: None
+  ports:
+  - name: metrics
+    port: 10254
+    protocol: TCP
+
