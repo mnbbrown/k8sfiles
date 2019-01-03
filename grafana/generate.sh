@@ -12,10 +12,10 @@ kind: ConfigMap
 metadata:
   labels:
     grafana_dashboard: "true"
-  name: ${NAME}-grafana-dashboard
+  name: ${NAME//_/-}-grafana-dashboard
   namespace: monitoring
 data:
-  k8s-dashboard.json: |-
+  ${NAME//_/-}-dashboard.json: |-
 ${CONTENTS}
 EOL
 done

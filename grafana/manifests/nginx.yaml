@@ -6,7 +6,7 @@ metadata:
   name: nginx-grafana-dashboard
   namespace: monitoring
 data:
-  k8s-dashboard.json: |-
+  nginx-dashboard.json: |-
     {
       "__inputs": [
         {
